@@ -33,11 +33,11 @@ public class C02_ManageWindowCommands {
 
 
         //browser imizin pozisyonunu (190, 70) olarak set ettik.
-        driver.manage().window().setPosition(new Point(190,70));
-
+        driver.manage().window().setPosition(new Point(200,100));
+        System.out.println("Browser imizin yeni  pozisyonu = " + driver.manage().window().getPosition());
         //browser imizin boyutunu (800, 1000) set ettik.
         driver.manage().window().setSize(new Dimension(800,1000));
-
+        System.out.println("Browser imizin yeni boyutu = " + driver.manage().window().getSize());
         //browser imizin boyutunu dogruluyoruz
 
         int height = driver.manage().window().getSize().getHeight();
@@ -46,7 +46,7 @@ public class C02_ManageWindowCommands {
 
         System.out.println("Browser in boyutu test ediliyor....");
 
-        if (width == 800 && height == 1000){
+        if (width == 800 && height == 882){
             System.out.println("Boyut testi PASSED");
         }else {
             System.out.println("Boyut testi FAILED");
@@ -59,7 +59,7 @@ public class C02_ManageWindowCommands {
 
         System.out.println("Browser in pozisyonu test ediliyor....");
 
-        if (X == 190 && Y == 70){
+        if (X == 200 && Y ==100){
             System.out.println("Pozisyon testi PASSED");
         }else {
             System.out.println("Pozisyon testi FAILED");
